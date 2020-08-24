@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
         <Splash imageData={data.allFile.edges[1].node.childImageSharp.fluid}/>
-        <IngredientFeature ingredientImage={data.allFile.edges[2].node.childImageSharp.fluid} logo={data.allFile.edges[1].node.childImageSharp.fluid}/>
+        <IngredientFeature ingredientImage={data.allFile.edges[0].node.childImageSharp.fluid} logo={data.allFile.edges[1].node.childImageSharp.fluid}/>
         <SuperFooter logo={data.allFile.edges[3].node.childImageSharp.fluid}/>
         <Footer logo={data.allFile.edges[1].node.childImageSharp.fluid}/>
     </Layout>
