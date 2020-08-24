@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Sustain`,
+    description: `Sustain is an upcoming iOS app to scan ingredient labels for unsustainable ingredients`,
+    author: `Sean Nordquist`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -10,7 +10,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/data/images`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -27,8 +27,16 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: [
+          `inter\:400,500,600,700`,
+          `libre baskerville\:300,400,600`
+        ],
+        display: 'swap'
+      }
+    },
+    `gatsby-plugin-react-helmet`,
   ],
 }
