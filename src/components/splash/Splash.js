@@ -93,6 +93,10 @@ const ColorSection = styled.div`
     width: 100%;
     min-height: 550px;
     z-index: 1;
+
+    @media (max-width: 768px) {
+        min-height: 300px;
+    }
 `
 
 const ImageWrapper = styled.div`
