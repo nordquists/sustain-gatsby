@@ -7,7 +7,6 @@ import { SuperFooter } from "../components/super_footer/SuperFooter"
 import { Footer } from "../components/footer/Footer"
 
 const IndexPage = ({ data }) => {
-  console.log(data)
   return (
     <Layout>
         <Splash imageData={data.allFile.edges[1].node.childImageSharp.fluid}/>

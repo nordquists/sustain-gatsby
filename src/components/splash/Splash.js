@@ -79,8 +79,8 @@ const Subtitle = styled.div`
 const TitleWrapper = styled.div`
     margin-top: 0px;
     margin-bottom: 50px;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    // margin-left: 2rem;
+    // margin-right: 2rem;
 
     max-width: 700px;
     width: 100%;

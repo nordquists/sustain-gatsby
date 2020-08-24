@@ -103,7 +103,7 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
 
-    padding: 3rem 0;
+    // padding: 3rem 0;
 `
 
 export const SuperFooter = ({ logo }) => {
