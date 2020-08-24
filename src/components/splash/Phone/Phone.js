@@ -16,6 +16,10 @@ const PhoneBody = styled.div`
     overflow: hidden;
     position: relative;
 
+    @media(max-width: 470) {
+        height: 5500px;
+        width: 260px;
+    }
     
 `
 
