@@ -93,6 +93,10 @@ const ColorSection = styled.div`
     width: 100%;
     min-height: 550px;
     z-index: 1;
+    
+    @media (max-width: 460px) {
+        display: none;
+    }
 
     @media (max-width: 768px) {
         margin-top: 300px
