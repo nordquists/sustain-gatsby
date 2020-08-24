@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "Sustain",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Sustain is an upcoming iOS app to scan ingredient labels for unsustainable ingredients",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Sean Nordquist",
   "dependencies": {
     "babel-plugin-styled-components": "^1.11.1",
     "gatsby": "^2.24.47",
