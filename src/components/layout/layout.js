@@ -5,15 +5,12 @@ import { Helmet } from "react-helmet"
 const LayoutStyled = styled.div`
     width: 100%;
     min-height: 100vh;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     #main-content {
         width: 100%;
-        max-width: 55rem;
-        padding: 0 2.5rem;
     }
 `
 

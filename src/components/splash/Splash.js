@@ -12,15 +12,22 @@ const SplashWrapper = styled.div`
     justify-content: center;
     align-items: center;
 
-    max-height: 1000px;
     width: 100%;
 
     padding-top: 100px;
+
+    @media (max-width: 460px) {
+        padding-top: 50px;
+    }
 `
 
 const Logo = styled.div`
-    width: 40px;
-    height: 40px;
+    margin: 0 auto;
+
+    width: 60px;
+    height: 60px;
+
+    margin-bottom: 20px;
 `
 
 const Title = styled.div`
@@ -34,39 +41,57 @@ const Title = styled.div`
     color: #000000;
     
     margin-bottom: 20px;
+
+    padding: 0 1rem;
+
+    @media (max-width: 768px) {
+        font-size: 2.9rem;
+    }
+
+    @media (max-width: 460px) {
+        font-size: 2.2rem;
+    }
 `
 
 const Subtitle = styled.div`
     font-family: Inter;
     font-style: normal;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 130%;
     text-align: center;
 
     color: #ADADAD;
 
     margin-bottom: 30px;
+
+    padding: 0 1rem;
+
+    @media (max-width: 768px) {
+        font-size: 1.1rem;
+    }
+
+    @media (max-width: 460px) {
+        font-size: 1rem;
+    }
 `
 
 const TitleWrapper = styled.div`
-    margin-top: 70px;
-    margin-bottom: 70px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    margin-left: 2rem;
+    margin-right: 2rem;
 
     max-width: 700px;
     width: 100%;
 `
 
 const ColorSection = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     background: #DE6B48;
     position: absolute;
-    bottom: 0;
+    margin-top: 600px;
     width: 100%;
-    min-height: 300px;
+    min-height: 550px;
     z-index: 1;
 `
 
@@ -90,7 +115,7 @@ export const Splash = ({ imageData }) => {
         <SplashWrapper>
             <TitleWrapper>
                 <Logo>
-                    <Image fluid="./images/rectangle.png" alt="Sustain Logo"/>
+                    <Image fluid={imageData} alt="Sustain Logo"/>
                 </Logo>
                 <Title>
                     Let’s make sustainable living sustainable.
@@ -99,9 +124,13 @@ export const Splash = ({ imageData }) => {
                     Keeping up with what ingredients are sustainable and what aren’t can be a headache – let Sustain take care of that for you. 
                 </Subtitle>
                 <BadgeContainer>
-                    <Badge>
-                        BETA
+
+                    <Badge href="https://github.com/nordquists/sustain">
+                        Check us out on Github
                     </Badge>
+                    {/* <Badge>
+                        BETA
+                    </Badge> */}
                 </BadgeContainer>
             </TitleWrapper>
             <ImageWrapper>
@@ -111,17 +140,5 @@ export const Splash = ({ imageData }) => {
         </SplashWrapper>
     )
 }
-
-const query  = graphql`
-  query {
-    fileName: file(relativePath: { eq: "images/myimage.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 400, maxHeight: 250) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-  `
 
 export default Splash;

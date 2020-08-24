@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import ReactPlayer from 'react-player'
+import Demo from '../../../images/sustainDemo.mp4'
 
 const PhoneBody = styled.div`
     background: #FFFFFF;
@@ -8,8 +9,9 @@ const PhoneBody = styled.div`
     box-sizing: border-box;
     border-radius: 50px;
 
+    
     height: 660px;
-    width: 315px;
+    width: 312px;
 
     overflow: hidden;
     position: relative;
@@ -27,16 +29,20 @@ const PhoneBody = styled.div`
 export const Phone = () => {
     return (
         <PhoneBody>
-            <ReactPlayer
+
+        <video autoPlay playsInline webKit-PlaysInline x5-PlaysInline muted preload="auto" style={{width: "100%", height: "100%"}}>
+            <source src={Demo} type="video/mp4" />
+        </video>
+            {/* <ReactPlayer
                     className='react-player'
-                    url='/CramDemoHD.mp4'
+                    url='../../../images/sustainDemo.mp4'
                     width='100%'
                     height='100%'
                     muted={true}
                     controls={false}
                     playing={true}
                     playsinline={true}
-                    />
+                    /> */}
         </PhoneBody>
     )
 }
