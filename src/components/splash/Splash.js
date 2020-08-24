@@ -128,9 +128,6 @@ export const Splash = ({ imageData }) => {
                     <Badge href="https://github.com/nordquists/sustain">
                         Check us out on Github
                     </Badge>
-                    {/* <Badge>
-                        BETA
-                    </Badge> */}
                 </BadgeContainer>
             </TitleWrapper>
             <ImageWrapper>
