@@ -86,22 +86,17 @@ const TitleWrapper = styled.div`
 
 const ColorSection = styled.div`
     background: #DE6B48;
-    position: absolute;
-    margin-top: 600px;
-    width: 100%;
-    min-height: 550px;
-    z-index: 1;
-    width: calc(100% + 20px);
-    margin-left: -10px;
-    
-    @media (max-width: 800px) {
-        display: none;
-    }
+    margin-top: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    @media (max-width: 768px) {
-        margin-top: 300px
-        min-height: 200px;
-    }
+    bottom: 0;
+    width: calc(100% + 30px);
+    margin-left: -10px;
+    height: 300px;
+    z-index: 1;
+    padding-bottom: 10rem;
 `
 
 const ImageWrapper = styled.div`
@@ -139,10 +134,11 @@ export const Splash = ({ imageData }) => {
                     </Badge>
                 </BadgeContainer>
             </TitleWrapper>
-            <ImageWrapper>
-                <Phone/>
-            </ImageWrapper>
-            <ColorSection/>
+            <ColorSection>
+                <ImageWrapper>
+                    <Phone/>
+                </ImageWrapper>
+            </ColorSection>
         </SplashWrapper>
     )
 }
