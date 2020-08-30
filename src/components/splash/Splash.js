@@ -94,7 +94,7 @@ const ColorSection = styled.div`
     min-height: 550px;
     z-index: 1;
     
-    @media (max-width: 460px) {
+    @media (max-width: 800px) {
         display: none;
     }
 
