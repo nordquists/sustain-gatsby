@@ -79,8 +79,6 @@ const Subtitle = styled.div`
 const TitleWrapper = styled.div`
     margin-top: 0px;
     margin-bottom: 50px;
-    // margin-left: 2rem;
-    // margin-right: 2rem;
 
     max-width: 700px;
     width: 100%;
@@ -93,6 +91,8 @@ const ColorSection = styled.div`
     width: 100%;
     min-height: 550px;
     z-index: 1;
+    width: calc(100% + 20px);
+    margin-left: -10px;
     
     @media (max-width: 800px) {
         display: none;
@@ -100,7 +100,7 @@ const ColorSection = styled.div`
 
     @media (max-width: 768px) {
         margin-top: 300px
-        min-height: 500px;
+        min-height: 200px;
     }
 `
 
